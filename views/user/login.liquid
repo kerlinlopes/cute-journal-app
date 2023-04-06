@@ -1,0 +1,87 @@
+{% layout "layout.liquid" %} {% block content %}
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  legend {
+    color: hotpink;
+    font-size: 40px;
+    font-family: "Delius", cursive;
+    text-align: center;
+  }
+  label {
+    color:white;
+    font-family: 'Delius', cursive;
+    font-size: 30px;
+    text-align: center;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+}
+input[type="text"] {
+    height: 50px;
+    width: 400px;
+    border: 3px solid mediumvioletred;
+    border-radius: 15px;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+} 
+input[type="password"] {
+    height: 50px;
+    width: 400px;
+    border: 3px solid mediumvioletred;
+    border-radius: 15px;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+} 
+  fieldset input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: hotpink;
+    font-size: 20px;
+    font-family: "Patrick Hand", cursive;
+    height: 50px;
+    width: 200px;
+    border: 3px solid white;
+    border-radius: 15px;
+    margin: auto;
+  }
+  .emojis {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
+  }
+</style>
+
+<div>
+  <form action="/user/login" method="post">
+
+    <fieldset>
+        <!-- LOGIN BUTTON -->
+      <legend>Login</legend>
+      <!-- USERNAME  -->
+      <label> Username: <input type="text" name="username" required /> </label>
+      <!-- PASSWORD  -->
+      <label>
+        Password: <input type="password" name="password" required />
+      </label>
+      <!-- LOGIN BUTTON  -->
+      <input type="submit" value="Login" />
+    </fieldset>
+
+
+    <span class="emojis">
+    <span style='font-size:100px;'>&#128221;</span>
+    <!-- <span style='font-size:100px;'>&#127800;</span> -->
+    <span style='font-size:100px;'>&#128158;</span>
+    <span style='font-size:100px;'>&#10024;</span>
+    </span>
+
+  </form>
+
+</div>
+
+{% endblock %}
